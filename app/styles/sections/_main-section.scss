@@ -1,0 +1,36 @@
+.main-section {
+  $bar-margin: 265px;
+  max-width: 300px;
+  overflow: hidden;
+
+  &__header {
+    position: relative;
+  }
+
+  &__title {
+    @include rem(font-size, 48px);
+    @include rem(margin-top, 20px);
+    @include rem(margin-bottom, 50px);
+    @include if-wider-than($breakpoint-1) {
+      @include rem(margin-bottom, 70px);
+      @include rem(font-size, 84px);
+    }
+  }
+
+  &__bar {
+    $left-space: ($bar-margin / $ideal-width) * 100%;
+    background-color: $blue;
+    position: absolute;
+    height: 290px;
+    top: 50px;
+    left: calc(100% - 10px);
+    width: 10px;
+    @include if-wider-than($breakpoint-1) {
+      left: $left-space;
+      top: 275px;
+      height: 221px;
+      width: calc(100% - #{$left-space});
+    }
+  }
+
+}
