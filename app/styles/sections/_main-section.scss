@@ -17,6 +17,15 @@
     }
   }
 
+  &__title,
+  &__intro {
+    @include rem(margin-top, 20px);
+    @include rem(margin-bottom, 50px);
+    @include if-wider-than($breakpoint-1) {
+      @include rem(margin-bottom, 70px);
+    }
+  }
+
   &__bar {
     $left-space: ($bar-margin / $ideal-width) * 100%;
     background-color: $blue;
@@ -25,6 +34,10 @@
     top: 50px;
     left: calc(100% - 10px);
     width: 10px;
+    transition-property: left;
+    transition-duration: 0.3s;
+    transition-timing-function: $easeInOutQuad;
+
     @include if-wider-than($breakpoint-1) {
       left: $left-space;
       top: 275px;
@@ -33,4 +46,43 @@
     }
   }
 
+  &__icons {
+    list-style: none;
+    padding: 0;
+    margin-left: 0;
+    margin-top: 0;
+  }
+
+  &__icon {
+    display: inline-block;
+  }
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    border-radius: 50%;
+    background-color: $blue;
+    height: 15px;
+    width: 15px;
+    padding: 10px;
+    margin-right: 10px;
+
+    svg {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+}
+
+.no-touchevents {
+  .main-section {
+    &__link {
+      transition: background-color 0.1s $easeOutQuad;
+      &:hover {
+        background-color: darken($blue, 15%);
+      }
+    }
+  }
 }
