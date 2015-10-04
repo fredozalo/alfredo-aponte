@@ -1,14 +1,34 @@
-.grid-container {
+.section {
+
   @include rem(margin-top, 60px);
-  @include rem(margin-left, 20px);
-  @include rem(margin-right, 20px);
+  @include rem(padding-left, 20px);
+  @include rem(padding-right, 20px);
   @include if-wider-than($breakpoint-1) {
     @include rem(margin-top, 135px);
-    @include rem(margin-left, 100px);
-    @include rem(margin-right, 100px);
+    @include rem(padding-left, 100px);
+    @include rem(padding-right, 100px);
+  }
+
+  &--color-2 {
+    background-color: $yellow;
+  }
+
+  &__title {
+    width: 100%;
+    @include rem(margin-top, 30px);
+    @include rem(margin-bottom, 30px);
+    @include if-wider-than($breakpoint-1) {
+      @include rem(margin-top, 90px);
+      @include rem(margin-bottom, 90px);
+    }
   }
 }
 
-.section {
-  // min-height: 100vh;
+.flexbox {
+  .section {
+    margin-top: 0;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
 }

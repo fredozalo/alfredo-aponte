@@ -1,0 +1,51 @@
+.work {
+
+  &__content {
+    @include rem(margin-bottom, 40px);
+  }
+
+  &__description {
+    max-width: 500px;
+  }
+
+  &__label {
+    display: block;
+    border-bottom: 1px solid #000;
+    padding-bottom: 10px;
+  }
+
+  &__title {
+    @include rem(font-size, 24px);
+    @include rem(margin-top, 15px);
+    font-family: $font-family-sans;
+    font-weight: $font-weight-condensed;
+    line-height: 1.2;
+  }
+
+  &__position {
+    font-family: $font-family-sans;
+    font-weight: $font-weight-condensed;
+  }
+
+}
+
+.flexwrap {
+  .work {
+    @include if-wider-than($breakpoint-1) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      @include if-wider-than($breakpoint-1) {
+        display: flex;
+        flex: 1 0 40%;
+        margin-right: 10%;
+      }
+      &:nth-of-type(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -6,6 +6,7 @@
 //
 @import 'utils/rem';
 @import 'utils/media-queries';
+@import 'utils/easings';
 
 //
 // Base
@@ -23,3 +24,4 @@
 // Sections
 //
 @import 'sections/main-section';
+@import 'sections/work';
