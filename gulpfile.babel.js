@@ -43,7 +43,7 @@ const testLintOptions = {
   }
 };
 
-gulp.task('lint', lint(['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js']));
+gulp.task('lint', lint(['app/scripts/**/*.js', '!app/scripts/vendor/*.js']));
 gulp.task('lint:test', lint('test/spec/**/*.js', testLintOptions));
 
 gulp.task('html', ['styles'], () => {
@@ -91,6 +91,15 @@ gulp.task('extras', () => {
     dot: true
   }).pipe(gulp.dest('dist'));
 });
+
+gulp.task('copy-vendor', () => {
+  return gulp.src([
+    'app/scripts/vendor/*.js',
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist/scripts/vendor'));
+});
+
 
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
@@ -160,7 +169,7 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'copy-vendor'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
