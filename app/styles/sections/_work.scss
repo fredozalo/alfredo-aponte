@@ -15,6 +15,7 @@
   }
 
   &__title {
+    display: block;
     @include rem(font-size, 24px);
     @include rem(margin-top, 15px);
     font-family: $font-family-sans;
