@@ -9,8 +9,12 @@
     @include rem(padding-right, 100px);
   }
 
-  &--color-2 {
+  &--color-yellow {
     background-color: $yellow;
+  }
+
+  &--color-gray {
+    background-color: $dark-gray;
   }
 
   &__title {
@@ -19,7 +23,7 @@
     @include rem(margin-bottom, 30px);
     @include if-wider-than($breakpoint-1) {
       @include rem(margin-top, 90px);
-      @include rem(margin-bottom, 90px);
+      @include rem(margin-bottom, 50px);
     }
   }
 }

@@ -1,5 +1,7 @@
 .work {
 
+  @include rem(padding-bottom, $section-vertical-padding);
+
   &__content {
     @include rem(margin-bottom, 40px);
   }
@@ -16,15 +18,15 @@
 
   &__title {
     display: block;
-    @include rem(font-size, 24px);
+    @include rem(font-size, 34px);
     @include rem(margin-top, 15px);
-    font-family: $font-family-sans;
+    font-family: $font-family-condensed;
     font-weight: $font-weight-condensed;
     line-height: 1.2;
   }
 
   &__position {
-    font-family: $font-family-sans;
+    font-family: $font-family-condensed;
     font-weight: $font-weight-condensed;
   }
 

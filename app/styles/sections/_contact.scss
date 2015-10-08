@@ -1,0 +1,17 @@
+.contact {
+
+  max-width: 375px;
+  color: #fff;
+
+  &__title {
+    @include rem(font-size, 34px);
+    font-family: $font-family-condensed;
+    line-height: 1.2;
+  }
+
+  &__description {
+    @include rem(margin-bottom, 45px);
+  }
+
+}
+

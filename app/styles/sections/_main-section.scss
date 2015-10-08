@@ -45,35 +45,6 @@
       width: calc(100% - #{$left-space});
     }
   }
-
-  &__icons {
-    list-style: none;
-    padding: 0;
-    margin-left: 0;
-    margin-top: 0;
-  }
-
-  &__icon {
-    display: inline-block;
-  }
-
-  &__link {
-    cursor: pointer;
-    display: block;
-    border-radius: 50%;
-    background-color: $blue;
-    height: 15px;
-    width: 15px;
-    padding: 10px;
-    margin-right: 10px;
-
-    svg {
-      display: block;
-      height: 100%;
-      width: 100%;
-    }
-  }
-
 }
 
 .no-touchevents {

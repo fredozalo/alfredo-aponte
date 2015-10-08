@@ -2,7 +2,7 @@
 // Font stacks
 //
 $font-family-serif: Georgia, Times, 'Times New Roman', serif;
-$font-family-sans: 'Open Sans', sans-serif;
+$font-family-condensed: 'Open Sans Condensed', sans-serif;
 
 $font-weight-condensed: 400;
 
@@ -14,8 +14,11 @@ $breakpoint-1: 640px;
 //
 // Colors
 //
+$white: #FFFFFF;
 $blue: #B6D2DF;
 $yellow: #FDEBC5;
+$dark-gray: #333333;
 
 
 $ideal-width: 1024px;
+$section-vertical-padding: 60px;
