@@ -17,6 +17,10 @@
     background-color: $dark-gray;
   }
 
+  &--color-blue {
+    background-color: $blue;
+  }
+
   &__title {
     width: 100%;
     @include rem(margin-top, 30px);

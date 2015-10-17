@@ -1,0 +1,107 @@
+.section--speaking {
+  background-color: $blue;
+
+  @include if-wider-than($breakpoint-1) {
+    background-color: $white;
+  }
+}
+
+.speaking {
+
+  width: 100%;
+
+  $left-margin: 70px;
+
+  &__list {
+    padding: 0;
+    margin-left: -5px;
+
+    @include if-wider-than($breakpoint-1) {
+      background-color: $blue;
+      @include rem(padding, 60px 40px 60px 15px);
+      max-width: 495px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -10%;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    display: block;
+    position: relative;
+    margin-left: $left-margin;
+    margin-bottom: 0;
+    @include rem(padding-bottom, 10px);
+
+    &:before {
+      $size: 30px;
+      content: '•';
+      font-size: $size;
+      color: $blue-dark;
+      position: absolute;
+      left: -20px;
+      top: -10px;
+      z-index: 10;
+    }
+
+    &:after {
+      content: '';
+      border-left: 1px solid white;
+      height: 100%;
+      position: absolute;
+      left: -15px;
+      top: 5px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+
+  }
+
+  &__date {
+    color: $white;
+    @include rem(font-size, 16px);
+    position: absolute;
+    left: -$left-margin + 5px;
+    top: 0px;
+  }
+
+  &__content {
+  }
+
+  &__location {
+    display: none;
+    float: right;
+
+    @include if-wider-than($breakpoint-1) {
+      display: block;
+    }
+  }
+
+  &__desc {
+    margin: 0;
+  }
+
+  &__desc,
+  &__title {
+    display: block;
+    color: $black;
+  }
+
+  &__title {
+    @include rem(font-size, 16px);
+    float: left;
+  }
+
+  &__desc {
+    font-family: $font-family-condensed;
+    @include rem(font-size, 12px);
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+
+}
