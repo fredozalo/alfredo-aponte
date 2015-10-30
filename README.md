@@ -10,4 +10,4 @@
 ## Deploying
 1. `gulp build`
 2. `gulp deploy`
-3. Visit [the page](http://marcobarbosa.github.io/alfredo-aponte/) to see the changes.
+3. Visit [the page](http://fredozalo.github.io/alfredo-aponte/) to see the changes.
