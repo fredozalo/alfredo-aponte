@@ -1,20 +1,14 @@
 .main-section {
   $bar-margin: 265px;
-  max-width: 300px;
   overflow: hidden;
+  margin-top: 10px;
+  width: 100%;
 
   &__header {
+    max-width: 300px;
+    margin-left: 0;
+    margin-right: 0;
     position: relative;
-  }
-
-  &__title {
-    @include rem(font-size, 48px);
-    @include rem(margin-top, 20px);
-    @include rem(margin-bottom, 50px);
-    @include if-wider-than($breakpoint-1) {
-      @include rem(margin-bottom, 70px);
-      @include rem(font-size, 84px);
-    }
   }
 
   &__title,
@@ -26,7 +20,17 @@
     }
   }
 
+  &__title {
+    @include rem(font-size, 48px);
+    @include rem(margin-bottom, 50px);
+    @include if-wider-than($breakpoint-1) {
+      @include rem(margin-bottom, 70px);
+      @include rem(font-size, 84px);
+    }
+  }
+
   &__bar {
+    display: none;
     $left-space: ($bar-margin / $ideal-width) * 100%;
     background-color: $blue;
     position: absolute;

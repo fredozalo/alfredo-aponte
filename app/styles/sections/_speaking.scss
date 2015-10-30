@@ -18,12 +18,11 @@
 
     @include if-wider-than($breakpoint-1) {
       background-color: $blue;
-      @include rem(padding, 60px 40px 60px 15px);
-      max-width: 495px;
+      @include rem(padding, 60px 40px 60px 40px);
+      max-width: 650px;
       margin-left: auto;
       margin-right: auto;
       margin-top: -10%;
-      width: 100%;
     }
   }
 
@@ -59,7 +58,6 @@
         display: none;
       }
     }
-
   }
 
   &__date {
@@ -75,9 +73,8 @@
 
   &__location {
     display: none;
-    float: right;
 
-    @include if-wider-than($breakpoint-1) {
+    @include if-wider-than(720px) {
       display: block;
     }
   }
@@ -95,11 +92,11 @@
   &__title {
     @include rem(font-size, 16px);
     float: left;
+    width: 75%;
   }
 
   &__desc {
     font-family: $font-family-condensed;
-    @include rem(font-size, 12px);
     text-transform: uppercase;
     margin-top: 0;
   }

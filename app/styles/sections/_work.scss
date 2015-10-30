@@ -1,9 +1,11 @@
 .work {
 
-  @include rem(padding-bottom, $section-vertical-padding);
-
   &__content {
     @include rem(margin-bottom, 40px);
+
+    &--bastard {
+      margin-bottom: 0;
+    }
   }
 
   &__description {
@@ -28,6 +30,7 @@
   &__position {
     font-family: $font-family-condensed;
     font-weight: $font-weight-condensed;
+    text-transform: uppercase;
   }
 
 }
