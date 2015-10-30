@@ -62,7 +62,6 @@
       min-height: calc(100vh - #{$section-vertical-padding * 4});
       &--is-revealing-next {
         min-height: calc(90vh - #{$section-vertical-padding * 4});
-        // min-height: 90vh;
       }
     }
 
