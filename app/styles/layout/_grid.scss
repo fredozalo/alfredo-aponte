@@ -31,6 +31,11 @@
     }
   }
 
+  &--reset-top {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
   &--color-yellow {
     background-color: $yellow;
   }
@@ -63,6 +68,10 @@
       &--is-revealing-next {
         min-height: calc(90vh - #{$section-vertical-padding * 4});
       }
+    }
+
+    &--block {
+      min-height: 0;
     }
 
   }
