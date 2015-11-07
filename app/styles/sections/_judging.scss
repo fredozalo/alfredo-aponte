@@ -1,0 +1,64 @@
+.judging {
+
+  width: 100%;
+
+  $shape-width: 166px;
+  $shape-height: 150px;
+
+  &__list {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include if-wider-than($breakpoint-2) {
+      margin-top: 90px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex: 0 0 50%;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 20px;
+    @include if-wider-than($breakpoint-2) {
+      flex: 0 0 $shape-width;
+      margin-bottom: 0;
+    }
+  }
+
+  &__shape {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__label {
+    display: block;
+    font-size: 1.3rem;
+    color: #000;
+    display: block;
+    font-family: $font-family-condensed;
+    text-align: center;
+    @include if-wider-than(490px) {
+      font-size: 2.5rem;
+    }
+    @include if-wider-than($breakpoint-2) {
+      font-size: 1.7rem;
+    }
+  }
+
+}
