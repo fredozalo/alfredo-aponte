@@ -12,32 +12,44 @@
   }
 
   &__wrapper {
-    @include rem(padding-left, 25px);
-    @include rem(padding-right, 25px);
+    @include rem(padding-left, $h-padding);
+    @include rem(padding-right, $h-padding);
     @include if-wider-than($breakpoint-1) {
       max-width: 820px;
       margin-left: auto;
       margin-right: auto;
-      @include rem(padding-left, 100px);
-      @include rem(padding-right, 100px);
+      @include rem(padding-left, $h-padding-b1);
+      @include rem(padding-right, $h-padding-b1);
     }
 
     @include if-wider-than($breakpoint-2) {
       max-width: 980px;
       margin-left: auto;
       margin-right: auto;
-      @include rem(padding-left, 150px);
-      @include rem(padding-right, 150px);
+      @include rem(padding-left, $h-padding-b2);
+      @include rem(padding-right, $h-padding-b2);
     }
   }
 
-  &--reset-top {
-    margin-top: 0;
-    padding-top: 0;
+  &--reset-top-on-b2 {
+    @include if-wider-than($breakpoint-2) {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  &--reset-bottom-on-b2 {
+    @include if-wider-than($breakpoint-2) {
+      padding-bottom: 0;
+    }
   }
 
   &--color-yellow {
     background-color: $yellow;
+  }
+
+  &--color-light-gray {
+    background-color: $gray;
   }
 
   &--color-gray {

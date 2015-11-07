@@ -1,5 +1,6 @@
 .main-section {
-  $bar-margin: 265px;
+  $bar-margin: 265px + ($h-padding-b1/2);
+
   overflow: hidden;
   margin-top: 10px;
   width: 100%;
@@ -30,7 +31,6 @@
   }
 
   &__bar {
-    display: none;
     $left-space: ($bar-margin / $ideal-width) * 100%;
     background-color: $blue;
     position: absolute;
@@ -44,7 +44,7 @@
 
     @include if-wider-than($breakpoint-1) {
       left: $left-space;
-      top: 275px;
+      top: 220px;
       height: 221px;
       width: calc(100% - #{$left-space});
     }

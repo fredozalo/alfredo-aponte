@@ -3,7 +3,6 @@
 //
 $font-family-serif: Georgia, Times, 'Times New Roman', serif;
 $font-family-condensed: 'Open Sans Condensed', sans-serif;
-
 $font-weight-condensed: 400;
 
 //
@@ -11,6 +10,15 @@ $font-weight-condensed: 400;
 //
 $breakpoint-1: 640px;
 $breakpoint-2: 980px;
+
+//
+// Spacings & Dimensions
+//
+$h-padding: 25px;
+$h-padding-b1: 100px;
+$h-padding-b2: 150px;
+$ideal-width: 1024px;
+$section-vertical-padding: 40px;
 
 //
 // Colors
@@ -21,7 +29,4 @@ $blue: #B6D2DF;
 $blue-dark: #72979A;
 $yellow: #FDEBC5;
 $dark-gray: #333333;
-
-
-$ideal-width: 1024px;
-$section-vertical-padding: 40px;
+$gray: #F2F2F2;
