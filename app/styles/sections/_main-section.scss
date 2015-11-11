@@ -4,12 +4,16 @@
   overflow: hidden;
   margin-top: 10px;
   width: 100%;
+  position: relative;
 
   &__header {
-    max-width: 400px;
+    max-width: 320px;
     margin-left: 0;
     margin-right: 0;
     position: relative;
+    @include if-wider-than($breakpoint-1) {
+      max-width: 400px;
+    }
   }
 
   &__title,
@@ -31,11 +35,12 @@
   }
 
   &__bar {
+    display: none;
     $left-space: ($bar-margin / $ideal-width) * 100%;
     background-color: $blue;
     position: absolute;
-    height: 290px;
-    top: 50px;
+    height: 100%;
+    top: 0;
     left: calc(100% - 10px);
     width: 10px;
     transition-property: left;
@@ -45,7 +50,7 @@
     @include if-wider-than($breakpoint-1) {
       left: $left-space;
       top: 220px;
-      height: 221px;
+      height: 230px;
       width: calc(100% - #{$left-space});
     }
   }
