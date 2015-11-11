@@ -5,3 +5,4 @@ dist
 .publish
 bower_components
 test/bower_components
+TODO.md
