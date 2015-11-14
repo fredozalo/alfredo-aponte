@@ -64,7 +64,7 @@
       opacity: 0.9;
       transform: translateY(40%);
       transition-property: opacity, transform;
-      transition-duration: 800ms;
+      transition-duration: 700ms;
       transition-timing-function: $easeOutQuad;
       &.is-partially-visible {
         opacity: 1;
