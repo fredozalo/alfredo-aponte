@@ -18,10 +18,10 @@
  *
  */
 
-/* global Utils, scrollMonitor */
+/* global SITE, Utils, scrollMonitor */
 'use strict';
 
-var ElementScrollVisibility = (function(window, document){
+SITE.ElementScrollVisibility = (function(window, document){
 
     /**
      * Constructor
@@ -55,7 +55,7 @@ var ElementScrollVisibility = (function(window, document){
      */
     ElementScrollVisibility.prototype.init = function() {
         document.addEventListener('DOMContentLoaded', this.onDOMReady.bind(this), false);
-        this.DOMloadedTimer = window.setTimeout(this.onDOMReady, CONSTANTS.LOADING_TIMEOUT_MS);
+        this.DOMloadedTimer = window.setTimeout(this.onDOMReady, SITE.CONSTANTS.LOADING_TIMEOUT_MS);
     };
 
     /**
@@ -75,7 +75,7 @@ var ElementScrollVisibility = (function(window, document){
      */
     ElementScrollVisibility.prototype.addEventListeners = function() {
         var offset = this.context.getAttribute('offset') || -100;
-        if (scrollMonitor !== undefined)  {
+        if (scrollMonitor !== undefined) {
             this.watcher = scrollMonitor.create( this.context, offset );
             this.watcher.enterViewport( this.onEnterViewport.bind(this) );
             this.watcher.fullyEnterViewport( this.onFullyEnterViewport.bind(this) );
@@ -115,7 +115,7 @@ var ElementScrollVisibility = (function(window, document){
      */
     ElementScrollVisibility.prototype.onFullyEnterViewport = function() {
         var animationEnd = null;
-        var _this = this;
+        var that = this;
 
         if (this.hasFullyPlayed) {
             return;
@@ -135,14 +135,14 @@ var ElementScrollVisibility = (function(window, document){
 
             this.context.addEventListener(animationEnd, function() {
 
-                _this.context
+                that.context
                     .classList
-                    .add( _this.CSS_ANIMATED_CLASS );
+                    .add( that.CSS_ANIMATED_CLASS );
 
                 window.setTimeout(function() {
-                    _this.context
+                    that.context
                         .classList
-                        .remove( _this.CSS_ANIMATE_CLASS );
+                        .remove( that.CSS_ANIMATE_CLASS );
                 }, 50);
 
             });
