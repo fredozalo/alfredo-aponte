@@ -1,7 +1,8 @@
 .main-section {
-  $bar-margin: 265px + ($h-padding-b1/2);
+  $bar-left-margin: 265px + ($h-padding-b1);
+  $bar-top-margin: 255px;
+  $main-section-idea-height: 732px;
 
-  overflow: hidden;
   margin-top: 10px;
   width: 100%;
   position: relative;
@@ -35,8 +36,6 @@
   }
 
   &__bar {
-    display: none;
-    $left-space: ($bar-margin / $ideal-width) * 100%;
     background-color: $blue;
     position: absolute;
     height: 100%;
@@ -48,12 +47,23 @@
     transition-timing-function: $easeInOutQuad;
 
     @include if-wider-than($breakpoint-1) {
-      left: $left-space;
-      top: 220px;
+      left: 265px;
+      top: 135px;
       height: 230px;
-      width: calc(100% - #{$left-space});
+      width: calc(100% - 265px);
     }
+
+    @include if-wider-than($breakpoint-2) {
+      left: 265px + 50px;
+      width: calc(100% - (265px + 50px));
+    }
+
+    @include if-wider-than(1280px) {
+      width: 100%;
+    }
+
   }
+
 }
 
 .no-touchevents {

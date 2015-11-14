@@ -5,6 +5,8 @@
   @include rem(padding-top, $section-vertical-padding);
   @include rem(padding-bottom, $section-vertical-padding);
 
+  overflow: hidden;
+
   @include if-wider-than($breakpoint-1) {
     @include rem(margin-top, 135px);
     @include rem(padding-top, $section-vertical-padding * 2);
