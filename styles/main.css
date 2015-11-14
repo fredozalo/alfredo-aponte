@@ -519,22 +519,6 @@ p {
   margin-right: 0;
 }
 
-.no-touchevents.csstransitions .knowledge__item {
-  opacity: 0.9;
-  -webkit-transform: translateY(20%);
-          transform: translateY(20%);
-  transition-property: opacity, -webkit-transform;
-  transition-property: opacity, transform;
-  transition-duration: 600ms;
-  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.no-touchevents.csstransitions .knowledge__item.is-partially-visible {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
-}
-
 .contact {
   color: #fff;
   width: 100%;
