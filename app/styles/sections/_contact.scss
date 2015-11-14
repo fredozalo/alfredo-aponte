@@ -40,3 +40,28 @@
 
 }
 
+.no-touchevents.csstransitions {
+  .contact {
+    .social-links__icon {
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 800ms;
+      transition-timing-function: $easeOutQuad;
+      $stagger-delay: 150ms;
+      $num-icons: 3;
+
+      @for $i from 1 through $num-icons {
+        &:nth-child(#{$i}) {
+          transition-delay: ($stagger-delay * $i);
+        }
+      }
+    }
+    .social-links {
+      &.is-fully-visible {
+        .social-links__icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
