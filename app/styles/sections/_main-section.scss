@@ -79,10 +79,12 @@
 
 .no-touchevents.csstransitions {
   $animation-bar-duration: 1200ms;
+  $first-delay: 600ms;
   .main-section {
     &__bar {
       transform: translateX(-150%);
       transition-property: transform;
+      transition-delay: $first-delay;
       transition-duration: $animation-bar-duration;
       transition-timing-function: $easeOutBack;
     }
@@ -91,7 +93,7 @@
       transition-property: opacity;
       transition-duration: 800ms;
       transition-timing-function: $easeOutQuad;
-      $initial-delay: $animation-bar-duration/2;
+      $initial-delay: $animation-bar-duration/2 + $first-delay;
       $stagger-delay: 150ms;
       $num-icons: 3;
 
