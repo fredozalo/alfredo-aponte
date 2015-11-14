@@ -129,7 +129,7 @@ SITE.ElementScrollVisibility = (function(window, document){
             .classList
             .add( this.CSS_ANIMATE_CLASS );
 
-        animationEnd = Utils.whichAnimationEvent();
+        animationEnd = SITE.Utils.whichAnimationEvent();
 
         if (animationEnd) {
 
