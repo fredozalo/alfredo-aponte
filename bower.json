@@ -2,8 +2,7 @@
   "name": "alfredo-aponte",
   "private": true,
   "dependencies": {
-    "normalize.css": "~3.0.3"
-  },
-  "devDependencies": {
+    "normalize.css": "~3.0.3",
+    "scrollMonitor": "~1.0.12"
   }
 }

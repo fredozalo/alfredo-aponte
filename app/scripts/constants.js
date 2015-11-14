@@ -1,0 +1,3 @@
+var CONSTANTS = {
+    LOADING_TIMEOUT_MS: 3000
+};
