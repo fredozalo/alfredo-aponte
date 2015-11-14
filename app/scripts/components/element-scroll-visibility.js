@@ -18,7 +18,7 @@
  *
  */
 
-/* global SITE, Utils, scrollMonitor */
+/* global SITE, scrollMonitor */
 'use strict';
 
 SITE.ElementScrollVisibility = (function(window, document){
