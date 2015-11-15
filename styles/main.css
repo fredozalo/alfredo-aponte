@@ -425,7 +425,7 @@ p {
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-delay: 400ms;
-  transition-duration: 1100ms;
+  transition-duration: 900ms;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
