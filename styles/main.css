@@ -419,13 +419,14 @@ p {
   background-color: #81b1c8;
 }
 
+/* Need to play with the bar's initial shape, kinda like transforming from a square to a rentangle */
 .no-touchevents.csstransitions .main-section__bar {
   -webkit-transform: translateX(-150%);
           transform: translateX(-150%);
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-delay: 400ms;
-  transition-duration: 900ms;
+  transition-duration: 1100ms;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
